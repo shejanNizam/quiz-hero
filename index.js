@@ -59,7 +59,7 @@ const displayQuiz = (data) => {
   }
 
   data.forEach((quiz, i) => {
-    console.log(quiz);
+    // console.log(quiz);
     const { question, options } = quiz;
     quizContainer.innerHTML += `
     <div class="m-3 py-3 px-4 shadow-sm rounded">
@@ -78,7 +78,8 @@ const displayQuiz = (data) => {
 };
 
 // EventListener for quiz submit button
-document.querySelector("#submit").addEventlistener("click", () => {
+
+document.querySelector("#submit").addEventListener("click", () => {
   if (answers.length < 6) {
     return;
   }
